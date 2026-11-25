@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="The MedTech Innovators Club Logo" width="380">
+</p>
+
 # Welcome to MedTech Innovators · VIT! 🩺⚡
 
 > *Where code meets care.*

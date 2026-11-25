@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MedTech Innovators · VIT</title>
 <meta name="description" content="MedTech Innovators — the healthcare technology club of VIT. Build devices, hack healthcare, learn with doctors and engineers.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -57,7 +60,8 @@ button{font:inherit}
 .ld-ring{position:absolute;width:560px;height:560px;border-radius:50%;border:3px dashed rgba(255,255,255,.35);animation:spin 30s linear infinite}
 .ld-ring.r2{width:760px;height:760px;animation-direction:reverse;animation-duration:45s}
 .ld-box{width:min(90vw,480px);text-align:center;position:relative}
-.ld-heart{width:110px;height:110px;margin:0 auto;animation:beat .9s infinite}
+.ld-heart{width:110px;height:120px;margin:0 auto 10px;animation:beat .9s infinite;filter:drop-shadow(0 6px 0 rgba(22,33,58,.25))}
+.ld-heart img{width:100%;height:100%;object-fit:contain}
 @keyframes beat{0%,100%{transform:scale(1)}12%{transform:scale(1.16)}24%{transform:scale(1)}36%{transform:scale(1.08)}50%{transform:scale(1)}}
 .ecg{width:100%;height:60px;margin:4px 0 8px}
 .ecg path{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
@@ -87,9 +91,19 @@ header.scrolled nav{background:rgba(34,195,230,.92);backdrop-filter:blur(8px);pa
 .nav-l a{position:relative;padding:4px 0}
 .nav-l a::after{content:'';position:absolute;left:0;bottom:-2px;height:3px;width:0;border-radius:3px;background:var(--ink);transition:width .25s}
 .nav-l a:hover::after{width:100%}
-.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:900;font-variation-settings:"SOFT" 100,"WONK" 1;font-size:24px;line-height:.95;color:var(--cream);-webkit-text-stroke:1.5px var(--ink);paint-order:stroke fill;text-shadow:2px 2px 0 var(--ink)}
-.logo .lg{display:block;flex:none;width:44px;height:44px;animation:beat 1.8s infinite}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:900;font-variation-settings:"SOFT" 100,"WONK" 1;font-size:24px;line-height:.95;color:var(--cream);-webkit-text-stroke:1.5px var(--ink);paint-order:stroke fill;text-shadow:2px 2px 0 var(--ink)}
+.logo .logo-mark{display:block;flex:none;width:38px;height:46px;object-fit:contain;animation:beat 2.2s ease-in-out infinite;filter:drop-shadow(0 2px 0 var(--ink));transition:transform .2s}
+.logo:hover .logo-mark{transform:scale(1.1) rotate(-4deg)}
 .logo small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:3px;-webkit-text-stroke:0;text-shadow:none;color:var(--ink);font-weight:700;margin-top:4px}
+.foot .logo .logo-mark{filter:drop-shadow(0 3px 0 rgba(0,0,0,.4))}
+.kicker-logo{width:20px;height:22px;object-fit:contain;vertical-align:middle;display:inline-block}
+.about-crest{display:flex;align-items:center;gap:18px;margin-bottom:22px;padding-bottom:18px;border-bottom:2px dashed rgba(22,33,58,.2);flex-wrap:wrap}
+.about-crest-img{max-height:64px;width:auto;object-fit:contain;filter:drop-shadow(0 3px 0 rgba(22,33,58,.15))}
+.about-crest-badge{display:flex;flex-direction:column}
+.about-crest-badge span{font-family:var(--display);font-weight:900;font-size:20px;color:var(--ink);line-height:1.1}
+.about-crest-badge small{font-size:12px;font-weight:700;color:var(--pink);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px}
+.mnav-crest{margin-bottom:12px;text-align:center}
+.mnav-crest img{max-height:100px;width:auto;filter:drop-shadow(0 5px 0 var(--ink))}
 .nav-r{display:flex;gap:12px;justify-content:flex-end}
 .nav-r .btn{font-size:14px;padding:9px 18px}
 .burger{display:none;background:var(--cream);border:3px solid var(--ink);border-radius:14px;box-shadow:0 3px 0 var(--ink);width:46px;height:42px;cursor:pointer;font-size:20px}
@@ -399,7 +413,7 @@ footer{background:var(--navy);color:var(--cream);position:relative}
 <div id="loader" role="status" aria-label="Loading">
   <div class="ld-ring"></div><div class="ld-ring r2"></div>
   <div class="ld-box">
-    <div class="ld-heart ico" data-icon="heart"></div>
+    <div class="ld-heart"><img src="assets/logo-emblem.png" alt="MedTech Innovators Club Emblem"></div>
     <svg class="ecg" viewBox="0 0 500 60" preserveAspectRatio="none" aria-hidden="true">
       <path class="base" d="M0 32 H90 L100 32 L110 8 L122 56 L132 20 L140 32 H250 L260 32 L270 8 L282 56 L292 20 L300 32 H410 L420 32 L430 8 L442 56 L452 20 L460 32 H500"/>
       <path class="pulse" d="M0 32 H90 L100 32 L110 8 L122 56 L132 20 L140 32 H250 L260 32 L270 8 L282 56 L292 20 L300 32 H410 L420 32 L430 8 L442 56 L452 20 L460 32 H500"/>
@@ -420,7 +434,7 @@ footer{background:var(--navy);color:var(--cream);position:relative}
     <div class="nav-l">
       <a href="#about">About</a><a href="#domains">Domains</a><a href="#events">Events</a><a href="#board">Team</a>
     </div>
-    <a class="logo" href="#hero"><span class="lg ico" data-icon="heart"></span><span>MedTech<small>INNOVATORS · VIT</small></span></a>
+    <a class="logo" href="#hero"><img src="assets/logo-emblem.png" alt="MedTech Innovators Club" class="logo-mark"><span>MedTech<small>INNOVATORS · VIT</small></span></a>
     <div class="nav-r">
       <a class="btn" href="#projects">Projects</a>
       <a class="btn pink" href="#join">Join us</a>
@@ -429,6 +443,7 @@ footer{background:var(--navy);color:var(--cream);position:relative}
   </nav>
 </header>
 <div class="mnav" id="mnav">
+  <div class="mnav-crest"><img src="assets/logo-vertical.png" alt="MedTech Innovators Club"></div>
   <a href="#about">About</a><a href="#domains">Domains</a><a href="#events">Events</a><a href="#projects">Projects</a><a href="#board">Team</a><a href="#faq">FAQ</a><a class="btn pink big" href="#join">Join us</a>
 </div>
 
@@ -439,7 +454,7 @@ footer{background:var(--navy);color:var(--cream);position:relative}
   <div id="heroDeco" aria-hidden="true"></div>
 
   <div class="hero-inner">
-    <div class="kicker">VIT Vellore &middot; Est. 2021</div>
+    <div class="kicker"><img src="assets/logo-emblem.png" class="kicker-logo" alt=""> VIT Vellore &middot; Est. 2021</div>
     <h1 class="title" aria-label="MedTech Innovators">
       <span class="line l1" data-split>MedTech</span>
       <span class="line l2" data-split>Innovators</span>
@@ -476,6 +491,13 @@ footer{background:var(--navy);color:var(--cream);position:relative}
       <div class="eyebrow">About us</div>
       <h2 class="h2">Healthcare, <em>reimagined</em> by students</h2>
       <div class="card about-card">
+        <div class="about-crest">
+          <img src="assets/logo.png" alt="The MedTech Innovators Club" class="about-crest-img">
+          <div class="about-crest-badge">
+            <span>The MedTech Innovators Club</span>
+            <small>Official Student Chapter &middot; VIT Vellore</small>
+          </div>
+        </div>
         <p><b>MedTech Innovators</b> is VIT's student-run club at the crossroads of medicine, engineering and code. We bring together biomedical engineers, programmers, designers and future doctors to build technology that actually helps people.</p>
         <p>From soldering a pulse oximeter at 2&nbsp;a.m. to pitching an AI diagnosis tool to clinicians, we learn by building &mdash; together.</p>
         <ul class="checks">
@@ -624,7 +646,7 @@ footer{background:var(--navy);color:var(--cream);position:relative}
   <svg class="fwave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 82 L0 40 C 240 0 480 70 720 40 C 960 10 1200 70 1440 30 L1440 82 Z" fill="#33409a" stroke="#16213a" stroke-width="4"/></svg>
   <div class="foot">
     <div>
-      <a class="logo" href="#hero"><span class="lg ico" data-icon="heart"></span><span>MedTech<small>INNOVATORS · VIT</small></span></a>
+      <a class="logo" href="#hero"><img src="assets/logo-emblem.png" alt="MedTech Innovators Club" class="logo-mark"><span>MedTech<small>INNOVATORS · VIT</small></span></a>
       <p>The healthcare technology club of Vellore Institute of Technology.</p>
     </div>
     <div><h5>Explore</h5><a href="#about">About</a><a href="#domains">Domains</a><a href="#events">Events</a><a href="#projects">Projects</a></div>
